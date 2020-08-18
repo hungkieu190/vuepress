@@ -39,7 +39,8 @@ if ( ! function_exists( 'vuepress_setup' ) ) :
          */
         add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
     }
-endif; // vuepress_setup
+endif;
+// vuepress_setup
 add_action( 'after_setup_theme', 'vuepress_setup' );
 
 if ( ! function_exists( 'vuepress_the_posts_navigation' ) ) :
@@ -52,13 +53,11 @@ if ( ! function_exists( 'vuepress_the_posts_navigation' ) ) :
                 'mid_size'  => 2,
                 'prev_text' => sprintf(
                     '%s <span class="nav-prev-text">%s</span>',
-                    vuepress_get_icon_svg( 'chevron_left', 22 ),
                     __( 'Newer posts', 'vuepress' )
                 ),
                 'next_text' => sprintf(
                     '<span class="nav-next-text">%s</span> %s',
-                    __( 'Older posts', 'vuepress' ),
-                    vuepress_get_icon_svg( 'chevron_right', 22 )
+                    __( 'Older posts', 'vuepress' )
                 ),
             )
         );
